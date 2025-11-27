@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket = "acer-demo-bucket-00001"
+    key    = "acer-support.tfstate"
+    region = "us-east-1"
+  }
+}
+
+
 # Modules
 module "ec2" {
   source        = "./modules/ec2"
