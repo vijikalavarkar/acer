@@ -1,0 +1,5 @@
+ami_id        = "ami-0c398cb65a93047f2"
+instance_type = "t3.small"
+key_name      = "KKey"
+ec2_region    = "us-east-1"
+ec2_name      = "demo-server-1"
