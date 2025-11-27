@@ -9,6 +9,7 @@ terraform {
     bucket = "acer-demo-bucket-00001"
     key    = "acer.tfstate"
     region = "us-east-1"
+    use_lockfile = true
   }
 }
 
