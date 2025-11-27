@@ -5,12 +5,3 @@ resource "aws_internet_gateway" "acer_internet_gateway" {
     Name = var.internet_gateway_name
   }
 }
-
-#TESTER
-resource "aws_internet_gateway" "tester_igw" {
-  vpc_id = data.aws_vpc.tester_vpc.id
-
-  tags = {
-    Name = var.tester_internet_gateway_name
-  }
-}
