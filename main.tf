@@ -30,6 +30,9 @@ module "acer_internet_gateway" {
   source                = "./modules/internet_gateway"
   vpc_id                = module.acer_vpc.vpc_id
   internet_gateway_name = var.internet_gateway_name
+  
+  #TESTER
+  tester_internet_gateway_name = var.tester_internet_gateway_name
 }
 
 #subnets
