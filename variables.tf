@@ -26,5 +26,14 @@ variable "acer_public_route_table_cidr_blocks" {}
 variable "acer_public_route_table_name" {}
 variable "acer_security_group_name" {}
 
-#TESTER
-variable "tester_internet_gateway_name" {}
+#ec2
+variable "ami_id" {}
+variable "instance_type" {}
+variable "key_name" {}
+variable "ec2_aws_region" {}
+variable "ec2_name" {}
+
+#dynamodb
+variable "dynamodb_table_name" {}
+variable "billing_mode" {}
+variable "hash_key" {}

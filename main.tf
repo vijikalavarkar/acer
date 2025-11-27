@@ -30,9 +30,8 @@ module "acer_internet_gateway" {
   source                = "./modules/internet_gateway"
   vpc_id                = module.acer_vpc.vpc_id
   internet_gateway_name = var.internet_gateway_name
-  
-  #TESTER
-  tester_internet_gateway_name = var.tester_internet_gateway_name
+
+
 }
 
 #subnets
@@ -83,4 +82,25 @@ module "acer_security_groups" {
   vpc_id = module.acer_vpc.vpc_id
 
   acer_security_group_name = var.acer_security_group_name
+}
+
+#ec2
+module "acer_ec2" {
+  source         = "./modules/ec2"
+  ami_id         = var.ami_id
+  instance_type  = var.instance_type
+  key_name       = var.key_name
+  ec2_aws_region = var.ec2_aws_region
+  ec2_name       = var.ec2_name
+
+  subnet1_id             = module.acer_subnets.subnet1_id
+  acer_security_group_id = module.acer_security_groups.acer_security_group_id
+}
+
+#dynamodb
+module "acer_dynamodb" {
+  source = "./modules/dynamodb"
+  dynamodb_table_name = var.dynamodb_table_name
+  billing_mode        = var.billing_mode
+  hash_key            = var.hash_key
 }
