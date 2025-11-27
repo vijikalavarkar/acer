@@ -25,3 +25,6 @@ variable "subnet3_name" {}
 variable "acer_public_route_table_cidr_blocks" {}
 variable "acer_public_route_table_name" {}
 variable "acer_security_group_name" {}
+
+#TESTER
+variable "tester_internet_gateway_name" {}

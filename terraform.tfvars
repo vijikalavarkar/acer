@@ -27,3 +27,6 @@ acer_public_route_table_name        = "acer_public_route_table"
 
 #security_groups
 acer_security_group_name = "acer_security_group"
+
+#TESTER
+tester_internet_gateway_name = "tester_igw"
